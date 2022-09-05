@@ -35,7 +35,7 @@ export default function App() {
         )}
         <Grid container spacing={4} columnSpacing={4}>
           <Grid item xs={12} md={12} lg={12}>
-            <Typography variant="h4" align="center">Omdb Nomination</Typography>
+            <Typography variant="h4" align="center">Search and nominate movies</Typography>
             <Search
               searchMovie={handleSubmit}
               changeHandler={handleQueryChange}
