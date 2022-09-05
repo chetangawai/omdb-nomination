@@ -1,26 +1,44 @@
 import { getMovies } from '../../services/OmdbSearch';
+import { GET_MOVIE_START, GET_MOVIE_SUCCESS, GET_MOVIE_FAILURE, NOMINATE_MOVIE, SHOW_NOMINATION_BANNER } from './../constants';
 
 export const searchMovie = (movieName) => {
   return async (dispatch) => {
     dispatch(getMovie())
     try {
       const response = await getMovies(movieName);
-      dispatch(getMovieSuccess(response.data.Search))
+      const movieData = response.data.Search.map(movie => {
+        const movieObj = {...movie}
+        movieObj.isNominated = false;
+        return movieObj;
+      });
+      console.log('movieData',movieData)
+      dispatch(getMovieSuccess(movieData))
       
     } catch (error) {
       dispatch(getMovieFailure())
     }
   }
 };
+
 export const getMovie = () => ({
-  type: "GET_MOVIE_START",
-})
+  type: GET_MOVIE_START,
+});
 
 export const getMovieSuccess = (movies) => ({
-  type: "GET_MOVIE_SUCCESS",
+  type: GET_MOVIE_SUCCESS,
   payload: movies,
-})
+});
 
 export const getMovieFailure = () => ({
-  type: "GET_MOVIE_FAILURE",
+  type: GET_MOVIE_FAILURE,
+});
+
+export const nominateMovies = (movies) => ({
+  type: NOMINATE_MOVIE,
+  payload: movies,
+});
+
+export const showNominationBanner = (flag) => ({
+  type: SHOW_NOMINATION_BANNER,
+  payload: flag,
 })

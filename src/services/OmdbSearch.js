@@ -8,5 +8,5 @@ export async function getMovies(searchQuery) {
 }
 
 function buildSearchUrl(searchQuery){
-   return `${OMDB_SEARCH_API}?apikey=${import.meta.env.VITE_API_KEY}&s=${searchQuery}`;
+   return `${OMDB_SEARCH_API}?apikey=${import.meta.env.VITE_API_KEY}&s=${searchQuery}&type=movie`;
 }

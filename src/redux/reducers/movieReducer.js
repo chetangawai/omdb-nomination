@@ -1,7 +1,7 @@
 
-import { GET_MOVIE_START, GET_MOVIE_SUCCESS, GET_MOVIE_FAILURE, NOMINATE_MOVIE } from './../constants';
+import { GET_MOVIE_START, GET_MOVIE_SUCCESS, GET_MOVIE_FAILURE, NOMINATE_MOVIE, SHOW_NOMINATION_BANNER } from './../constants';
 
-const initialState = { movies: [], nominatedMovies: [], loading: false, hasErrors: false };
+const initialState = { movies: [], nominatedMovies: [], loading: false, hasErrors: false, showBanner: false };
 
 export const movieReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -15,7 +15,10 @@ export const movieReducer = (state = initialState, action) => {
       return { ...state, loading: false, hasErrors: true }
     }
     case NOMINATE_MOVIE: {
-      return { ...state, movie: action.payload };
+      return { ...state, nominatedMovies: action.payload };
+    }
+    case SHOW_NOMINATION_BANNER: {
+      return { ...state, showBanner: action.payload };
     }
   }
   return state;
