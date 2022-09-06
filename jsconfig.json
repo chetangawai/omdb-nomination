@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "types": [
+      "node"
+    ],
+    "module": "esnext",
+    "jsx": "react",
+    "paths": {
+      "@app/*": [
+        "src/components/*"
+      ],
+    }
+  },
+  "include": [
+    "src/components/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
