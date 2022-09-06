@@ -27,6 +27,5 @@ yarn dev
 - [Demo link](https://www.loom.com/share/586f61a123b84cd38cbccaad9a19db71)
 
 - Code walkthrough
-
- 1. [Part1](https://www.loom.com/share/52b9d2f84c24403bbf3aa31c1d123555)
- 2. [Part2(https://www.loom.com/share/9eb0b5f267164b7cb26d811e914a5ae3)
+  1. [Part1](https://www.loom.com/share/52b9d2f84c24403bbf3aa31c1d123555)
+  2. [Part2](https://www.loom.com/share/9eb0b5f267164b7cb26d811e914a5ae3)
