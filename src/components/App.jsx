@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Grid, Container, Box, Alert, Typography } from '@mui/material';
-import Search from './Search';
-import SearchResult from './SearchResult';
-import { useSelector, useDispatch } from 'react-redux';
-import { searchMovie, showNominationBanner } from '../redux/actions';
-import Nomination from './Nomination';
+import React, { useState } from "react";
+import { Grid, Container, Box, Alert, Typography } from "@mui/material";
+import Search from "./Search";
+import SearchResult from "./SearchResult";
+import { useSelector, useDispatch } from "react-redux";
+import { searchMovie, showNominationBanner } from "../redux/actions";
+import Nomination from "./Nomination";
 
 export default function App() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.movieReducer.movies) || [];
   const nominatedMovies = useSelector(

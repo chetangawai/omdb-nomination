@@ -1,8 +1,8 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { Typography, Avatar, Grid, Divider, Button } from '@mui/material';
-import { nominateMovies, showNominationBanner } from '../redux/actions';
-import PropTypes from 'prop-types';
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Typography, Avatar, Grid, Divider, Button } from "@mui/material";
+import { nominateMovies, showNominationBanner } from "../redux/actions";
+import PropTypes from "prop-types";
 
 const CardItem = ({ item, type }) => {
   const dispatch = useDispatch();
@@ -18,7 +18,8 @@ const CardItem = ({ item, type }) => {
       nominationsDuplicate.push(item);
       dispatch(nominateMovies(nominationsDuplicate));
       manageButtonState(item.imdbID, true);
-    } else {
+    } 
+    else {
       dispatch(showNominationBanner(true));
     }
   };
@@ -54,7 +55,7 @@ const CardItem = ({ item, type }) => {
           <Typography gutterBottom variant="h6" component="div">
             {`${item.Title}(${item.Year})`}
           </Typography>
-          {type === 'nomination' ? (
+          {type === "nomination" ? (
             <Button
               size="small"
               variant="contained"

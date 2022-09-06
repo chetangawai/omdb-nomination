@@ -1,13 +1,13 @@
-import React from 'react';
-import CardItem from './CardItem';
+import React from "react";
+import CardItem from "./CardItem";
 import {
   Typography,
   CssBaseline,
   Divider,
   Container,
   Box,
-} from '@mui/material';
-import PropTypes from 'prop-types';
+} from "@mui/material";
+import PropTypes from "prop-types";
 
 const SearchResult = ({ items }) => {
   if (!items) return null;

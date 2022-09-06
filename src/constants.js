@@ -1,1 +1,1 @@
-export const OMDB_SEARCH_API = 'http://www.omdbapi.com/';
+export const OMDB_SEARCH_API = "http://www.omdbapi.com/";

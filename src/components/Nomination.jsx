@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import CardItem from './CardItem';
-import { Typography, CssBaseline, Divider, Container } from '@mui/material';
+import React from "react";
+import PropTypes from "prop-types";
+import CardItem from "./CardItem";
+import { Typography, CssBaseline, Divider, Container } from "@mui/material";
 
 const Nomination = ({ items }) => {
   return (

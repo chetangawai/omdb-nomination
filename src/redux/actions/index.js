@@ -1,8 +1,8 @@
-import { getMovies } from '../../services/OmdbSearch';
-import { GET_MOVIE_START, GET_MOVIE_SUCCESS, GET_MOVIE_FAILURE, NOMINATE_MOVIE, SHOW_NOMINATION_BANNER } from './../constants';
+import { getMovies } from "../../services/OmdbSearch";
+import { GET_MOVIE_START, GET_MOVIE_SUCCESS, GET_MOVIE_FAILURE, NOMINATE_MOVIE, SHOW_NOMINATION_BANNER } from "./../constants";
 
 export const searchMovie = (movieName) => {
-  return async (dispatch) => {
+  return async (dispatch)=> {
     dispatch(getMovie())
     try {
       const response = await getMovies(movieName);
@@ -11,7 +11,6 @@ export const searchMovie = (movieName) => {
         movieObj.isNominated = false;
         return movieObj;
       });
-      console.log('movieData',movieData)
       dispatch(getMovieSuccess(movieData))
       
     } catch (error) {

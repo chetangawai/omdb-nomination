@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 import {
   Grid,
   Container,
   Typography,
   InputAdornment,
   TextField,
-} from '@mui/material';
-import PropTypes from 'prop-types';
-import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/icons-material/Search';
-import CssBaseline from '@mui/material/CssBaseline';
+} from "@mui/material";
+import PropTypes from "prop-types";
+import IconButton from "@mui/material/IconButton";
+import SearchIcon from "@mui/icons-material/Search";
+import CssBaseline from "@mui/material/CssBaseline";
 
 const Search = ({ searchMovie, changeHandler }) => {
   const handleSubmit = (event) => {
@@ -30,7 +30,7 @@ const Search = ({ searchMovie, changeHandler }) => {
               <TextField
                 type="search"
                 placeholder="Type movie title to search"
-                inputProps={{ 'aria-label': 'search movie title' }}
+                inputProps={{ "aria-label": "search movie title" }}
                 onChange={(e) => changeHandler(e.target.value)}
                 fullWidth
                 InputProps={{
