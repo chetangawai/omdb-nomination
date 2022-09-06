@@ -36,7 +36,7 @@ const Search = ({ searchMovie, changeHandler }) => {
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position="end">
-                      <IconButton type="submit" aria-label="search">
+                      <IconButton type="submit" aria-label="search" data-testid="search-button">
                         <SearchIcon />
                       </IconButton>
                     </InputAdornment>
