@@ -1,11 +1,5 @@
 {
   "presets": [
-    ["@babel/preset-env",
-    { "useBuiltIns": "entry", "corejs": 2, "targets": { "node": "current" } }
-    ],
-    "@babel/preset-react",
-  ],
-  "plugins": ["babel-plugin-transform-import-meta",
-  
-   ]
+    "@babel/preset-env", "@babel/preset-react"
+  ]
 }
