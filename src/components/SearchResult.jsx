@@ -22,7 +22,7 @@ const SearchResult = ({ items }) => {
         <Divider />
         <div className="results">
           {items.map((item) => (
-            <CardItem key={item.imdbID} item={item} isNominated={item.isNominated} />
+            <CardItem key={item.imdbID} type="search_result" item={item} />
           ))}
         </div>
       </Box>
